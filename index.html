@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESL Learning Portal - Choose Your Level</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 1.5rem;
+        }
+        .level-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        .level-button {
+            padding: 1rem;
+            font-size: 1.2rem;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .level-button:hover {
+            background-color: #0056b3;
+        }
+        .level-button:nth-child(odd) {
+            background-color: #28a745;
+        }
+        .level-button:nth-child(odd):hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the ESL Learning Portal</h1>
+        <p>Please select your English proficiency level:</p>
+        <div class="level-grid">
+            <button class="level-button" onclick="selectLevel('A1')">A1</button>
+            <button class="level-button" onclick="selectLevel('B1')">B1</button>
+            <button class="level-button" onclick="selectLevel('A2')">A2</button>
+            <button class="level-button" onclick="selectLevel('B2')">B2</button>
+            <button class="level-button" onclick="selectLevel('A3')">A3</button>
+            <button class="level-button" onclick="selectLevel('B3')">B3</button>
+        </div>
+    </div>
+
+    <script>
+        function selectLevel(level) {
+            window.location.href = level + "_week.html";
+        }
+    </script>
+</body>
+</html>
